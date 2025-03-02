@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height:100vh;
+    background: linear-gradient(165deg, #405ac4,#45d145);
+    padding:10px ;
+}
+.todoapp{
+    width:100%;
+    max-width: 540px;
+    background: white;
+    padding:40px 30px 70px;
+    margin:100px auto 20px;
+    border-radius: 20px;
+
+}
+.todoapp h2{
+    font-size: 30px;
+    font-weight: 600;
+    color: #043524d6;
+    display:flex;
+    align-items: center;
+    margin-bottom: 20px;
+    
+
+}
+.todoapp img{
+    width:40px;
+    height:40px;
+    border: 5px solid  rgb(20, 22, 17);
+    border-radius: 50%;
+    box-sizing: content-box;
+    margin-left: 20px;
+}
+.row{
+    display:flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    background:rgb(199, 223, 227);
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+
+}
+#input-box{
+    flex-grow:1;
+    width:auto;
+    height:5vh;
+    font-size: 3vh;
+    font-weight: 400;
+    color: rgb(10, 12, 105);
+    border:none;
+    outline:none;
+    border-radius: 15px;
+    padding: 0 30px; /* Add padding for better appearance */
+    margin-right: 10px;
+}
+.row button{
+    width:100px;
+    height:40px;
+    margin-right:25px;
+    border:none;
+    outline:none;
+    color:#232020;
+    font-weight: 700;
+    background-color: rgb(127, 153, 228);
+    cursor: pointer;
+    border-radius: 35px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    display:flex;
+    align-items: center;
+    list-style: none;
+    position:relative;
+    font-size:17px;
+    font-weight: 700;
+    padding:12px 8px 12px 50px;
+    user-select: none;
+    cursor:pointer;
+    background: white; /* Add a background to make items stand out */
+    margin-top: 20px; /* Space between tasks */
+    border-radius: 10px; 
+}
+ul li::before{
+    content:'';
+    display: inline-block;
+    height:20px;
+    width:20px;
+    border-radius: 50%;
+    background-image: url(https://cdn-icons-png.flaticon.com/512/545/545680.png);
+    background-size: cover;
+    background-position: center;
+    /* top:12px; */
+    /* left:8px; */
+}
+ul li.checked{
+    color:#555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url('https://cdn-icons-png.flaticon.com/512/463/463574.png');
+}
+ul li span{
+    position:absolute;
+    right:15px;
+    top:5px;
+    width:40px;
+    height:40px;
+    font-size:22px;
+    line-height: 40px;
+   border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+ul li span:hover{
+    background: #edeef0;
+}
